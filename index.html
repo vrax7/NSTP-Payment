@@ -1,0 +1,62 @@
+le
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSTP Payment System - Code 4453</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NSTP Payment System</h1>
+            <p>Code: 4453 - PM Session (IT)</p>
+            <p>Facilitator: Edward D. Concepcion</p>
+        </header>
+
+        <div class="controls">
+            <div class="payment-control">
+                <label for="payment-amount">Payment Amount (₱):</label>
+                <input type="number" id="payment-amount" value="10" min="1">
+            </div>
+            
+            <div class="student-input">
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" placeholder="Enter student ID">
+                <button id="check-id">Check ID</button>
+            </div>
+            
+            <div class="add-student">
+                <h3>Add New Student</h3>
+                <input type="text" id="new-student-id" placeholder="Student ID">
+                <input type="text" id="new-student-name" placeholder="Full Name">
+                <button id="add-student">Add Student</button>
+            </div>
+        </div>
+
+        <div class="status-message" id="status-message"></div>
+
+        <div class="sections">
+            <div class="paid-section">
+                <h2>Paid Students <span id="paid-count">0</span></h2>
+                <div class="paid-list" id="paid-list"></div>
+            </div>
+            
+            <div class="unpaid-section">
+                <h2>Unpaid Students <span id="unpaid-count">0</span></h2>
+                <div class="unpaid-list" id="unpaid-list"></div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <h2>Payment Summary</h2>
+            <p>Total Collected: ₱<span id="total-collected">0</span></p>
+            <button id="generate-report">Generate Report</button>
+            <div class="report" id="report"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

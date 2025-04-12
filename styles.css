@@ -1,0 +1,237 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.payment-control, .student-input, .add-student {
+    flex: 1;
+    min-width: 250px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#add-student {
+    background-color: #27ae60;
+}
+
+#add-student:hover {
+    background-color: #219653;
+}
+
+#generate-report {
+    background-color: #9b59b6;
+    margin-top: 10px;
+}
+
+#generate-report:hover {
+    background-color: #8e44ad;
+}
+
+.status-message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.paid-section, .unpaid-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.paid-section h2 {
+    color: #27ae60;
+}
+
+.unpaid-section h2 {
+    color: #e74c3c;
+}
+
+.paid-list, .unpaid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.student-card {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #3498db;
+    position: relative;
+}
+
+.paid-student {
+    border-left-color: #27ae60;
+}
+
+.unpaid-student {
+    border-left-color: #e74c3c;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.summary {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.report {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.report table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.report th, .report td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.report th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.report tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.paid-status {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.paid-true {
+    background-color: #27ae60;
+}
+
+.paid-false {
+    background-color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+    .controls, .sections {
+        flex-direction: column;
+    }
+    
+    .paid-list, .unpaid-list {
+        grid-template-columns: 1fr;
+    }
+}
